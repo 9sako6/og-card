@@ -1,9 +1,12 @@
 {
-  "name": "@og-card/webcomponent",
+  "name": "og-card",
   "version": "0.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/9sako6/og-card.git"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "type": "module",
   "scripts": {
