@@ -62,22 +62,22 @@ class OgCard extends HTMLElement {
 
   get css() {
     return `
-.ogp-card-anchor {
+.og-card-anchor {
   text-decoration: none;
   color: inherit;
   display: block;
   max-width: 800px;
 }
 
-.ogp-card-anchor:hover {
+.og-card-anchor:hover {
   background: #f9fdff;
 }
 
-.ogp-card-container {
+.og-card-container {
   display: block;
 }
 
-.ogp-card {
+.og-card {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   justify-content: space-between;
@@ -89,23 +89,23 @@ class OgCard extends HTMLElement {
   overflow: hidden;
 }
 
-.ogp-card-og-image-container {
+.og-card-og-image-container {
   height: 120px;
   grid-column: span 2 / span 2;
 }
 
-.ogp-card-og-image {
+.og-card-og-image {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.ogp-card-main-container {
+.og-card-main-container {
   padding: 0.5em 1em;
   grid-column: span 4 / span 4;
 }
 
-.ogp-card-title {
+.og-card-title {
   max-width: 100%;
   font-size: 1em;
   margin: 0;
@@ -114,7 +114,7 @@ class OgCard extends HTMLElement {
   text-overflow: ellipsis;
 }
 
-.ogp-card-description {
+.og-card-description {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -125,7 +125,7 @@ class OgCard extends HTMLElement {
   text-overflow: ellipsis;
 }
 
-.ogp-card-domain-container {
+.og-card-domain-container {
   max-width: 100%;
   padding-top: 0.5em;
   justify-content: end;
@@ -136,7 +136,7 @@ class OgCard extends HTMLElement {
   color: rgb(108, 110, 112);
 }
 
-.ogp-card-domain {
+.og-card-domain {
   max-width: 100%;
   overflow: hidden;
   word-break: break-all;
@@ -144,7 +144,7 @@ class OgCard extends HTMLElement {
   text-overflow: ellipsis;
 }
 
-.ogp-card-favicon {
+.og-card-favicon {
   height: 14px;
   width: 14px;
   padding-right: 3px;
@@ -157,19 +157,19 @@ class OgCard extends HTMLElement {
     <style>${this.css}</style>
     <a href="${
       ogUrl || this.src
-    }" target="_blank" rel="noopener noreferrer" class="ogp-card-anchor">
-      <div class="ogp-card-container">
-        <div class="ogp-card">
-          <div class="ogp-card-main-container">
-            <h2 class="ogp-card-title">${ogTitle || ""}</h2>
-            <div class="ogp-card-description">${ogDescription || ""}</div>
-            <div class="ogp-card-domain-container">
-              <img class="ogp-card-favicon" src="${faviconUrl}" />
-              <div class="ogp-card-domain">${this.domain}</div>
+    }" target="_blank" rel="noopener noreferrer" class="og-card-anchor">
+      <div class="og-card-container">
+        <div class="og-card">
+          <div class="og-card-main-container">
+            <h2 class="og-card-title">${ogTitle || ""}</h2>
+            <div class="og-card-description">${ogDescription || ""}</div>
+            <div class="og-card-domain-container">
+              <img class="og-card-favicon" src="${faviconUrl}" />
+              <div class="og-card-domain">${this.domain}</div>
             </div>
           </div>
-          <div class="ogp-card-og-image-container">
-            <img class="ogp-card-og-image"
+          <div class="og-card-og-image-container">
+            <img class="og-card-og-image"
               src="${ogImageUrl || ""}" />
           </div>
         </div>
